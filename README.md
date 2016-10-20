@@ -14,19 +14,20 @@ existing application that has a Twig-enabled output layer.
    `\Twig_Environment` instance that will generate the CSV; then
    just pass it to `\mbaynton\CSV4Twig\Filter::registerFilters()`.
 3. Use it in your template with the autoescape tag:
-
-       {% autoescape "csv" %}
-       {{ some_value }},{{ another_value }}
-       {% endautoescape %}
+   ```
+   {% autoescape "csv" %}
+   {{ some_value }},{{ another_value }}
+   {% endautoescape %}
+   ```
    The contents of `some_value` and `another_value` will be
    escaped using the default CSV-escaping conventions
    of PHP's `fputcsv()` function. `fputcsv()` is the function this
    filter uses internally.
    
    If you prefer, you can also escape certain values explicitly:
-   
-       {% autoescape false %}
-       {{ some_value|e("csv") }},{{ another_value }}
-       {% endautoescape %}
-   
+   ```
+   {% autoescape false %}
+   {{ some_value|e("csv") }},{{ another_value }}
+   {% endautoescape %}
+   ```
 That's it!
