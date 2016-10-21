@@ -25,6 +25,10 @@
       "mbaynton\\CSV4Twig\\Tests\\": "tests/src/"
     }
   },
+  "suggest": {
+    "twig/twig": "While there are no hard dependencies on Twig, it's kind of the point."
+  },
+  "keywords": ["Templating"],
   "config": {
     "platform": {
       "php": "5.4.0"
